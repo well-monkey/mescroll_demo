@@ -2,11 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Webpack Sample Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>这是一个例子</title>
 </head>
 <body>
     <div id='root'>
-
+        <p class="header">示例: 在vue中使用mescroll</p>
+        <!--滑动区域-->
+        <div id="mescroll" class="mescroll">
+            <!--展示上拉加载的数据列表-->
+            <ul id="dataList" class="data-list">
+                <li v-for="pd in pdlist">
+                    <img class="pd-img" :src="pd.pdImg"/>
+                    <p class="pd-name">{{pd.pdName}}</p>
+                    <p class="pd-price">{{pd.pdPrice}} 元</p>
+                    <p class="pd-sold">已售{{pd.pdSold}}件</p>
+                </li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>
